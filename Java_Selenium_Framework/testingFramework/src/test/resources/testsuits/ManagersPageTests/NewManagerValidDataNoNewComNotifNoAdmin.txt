@@ -1,0 +1,13 @@
+ID: 11
+Summary:
+Creating a new manager without making him admin and without notifications on new comments, using the valid data 
+Preconditions:
+1. The user is logined into the site.
+2. The main page of the site is opened.
+Step actions:
+1. Move the mouse over the dropdown panel on the left side of the screen 
+2. Click on the "Managers" button in the Pop-up menu
+3. Click on the "New Manager" button
+4. Fill in all the required fields, check all the suggested checkboxes except for the "Notification on new comment" and "Admin" checkboxes, and click on the “Submit” button
+Expected result:
+The new manager is successfully created and added to the list of managers

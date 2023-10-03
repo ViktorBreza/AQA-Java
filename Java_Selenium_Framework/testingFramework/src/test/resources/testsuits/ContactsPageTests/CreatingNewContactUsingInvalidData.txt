@@ -1,0 +1,13 @@
+ID: 3
+Summary:
+Creating new contact using  invalid data.
+Preconditions:
+1. The user is logined into the site.
+2. The main page of the site is opened.
+Step actions:
+1. Move the mouse over the dropdown panel on the left side of the screen 
+2. Click on the "Contacts" button in the Pop-up menu
+3. Click on the "New contact" button
+4. Fill in all required fields but leave the "Last name" field empty, click on the "Submit" button.
+Expected result:
+"Last name" field is highlighted in red, "Last Name is required Field cannot contain only spaces" message is appeared, the "Submit" button is inactive and has a pale color                      

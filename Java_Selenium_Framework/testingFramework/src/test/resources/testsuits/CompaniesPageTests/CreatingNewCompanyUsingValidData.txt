@@ -1,0 +1,13 @@
+ID: 1
+Summary:
+Creating new company using the valid data.
+Preconditions:
+1. The user is logined into the site.
+2. The main page of the site is opened.
+Step actions:
+1. Move the mouse over the dropdown panel on the left side of the screen 
+2. Click on the "Companies" button in the Pop-up menu
+3. Click on the "New Company" button
+4. Fill in all the required fields and click on the "Submit" button.
+Expected result:
+The new company is successfully created and added to the list of companies                         

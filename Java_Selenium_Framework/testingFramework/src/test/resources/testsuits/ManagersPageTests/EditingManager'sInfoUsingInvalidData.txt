@@ -1,0 +1,14 @@
+ID: 10
+Summary:
+Editing manager's information using invalid email	
+Preconditions:
+1. The user is logined into the site.
+2. The manager's profile is created.
+3. The "Managers" page of the site is opened.
+Step actions:
+1. Click on the manager's name in the "Full name" column of managers list
+2. Click on the "Edit" button
+3. Click on the "Add email" button
+4. Enter invalid email into the "Email" text field
+Expected result: 
+"Email" text box is highlighted in red, "Email must be valid" message appeared                         

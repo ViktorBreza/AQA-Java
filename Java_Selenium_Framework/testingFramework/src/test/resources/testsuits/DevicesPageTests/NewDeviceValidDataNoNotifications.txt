@@ -1,0 +1,13 @@
+ID: 7
+Summary:
+Creating new device without notifications and ticket, using the valid data.
+Preconditions:
+1. The user is logined into the site.
+2. The main page of the site is opened.
+Step actions:
+1. Move the mouse over the dropdown panel on the left side of the screen 
+2. Click on the "Devices" button in the Pop-up menu
+3. Click on the "New Device" button
+4. Fill in all fields, leave "Send notification and create ticket if device failure" checkbox unchecked, and click on the "Submit" button
+Expected result: 
+The new device is successfully created and added to the list of devices                          

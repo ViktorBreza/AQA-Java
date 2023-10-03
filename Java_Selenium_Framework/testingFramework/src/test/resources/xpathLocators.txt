@@ -1,0 +1,41 @@
+Menu:
+Dashboard = //*[@id='menu-dashboard']
+Tickets = //*[@id='menu-tickets']/p
+Companies = //*[@id='menu-companies']/p
+Contacts = //*[@id='menu-contacts']/p
+Devices = //*[@id='menu-device-list']/p
+Departments = //*[@id='menu-departments']/p
+Managers = //*[@id='menu-managers']/p
+Categories = //*[@id='menu-categories']/p
+
+Pages:
+Tickets -> New Ticket = //*[@id='create-new-ticket']
+Tickets -> Total = //*[@id='stage-total']
+Tickets -> Closed = //*[@id='stage-closed']
+Tickets -> All tickets = //*[@id='tickets']/a
+Tickets -> My tasks = //*[@id='my-tasks_btn']
+Contact -> New Contact = //*[@id='new-contact']
+Categories -> New Category = //*[@id='new-category-btn']
+Сategories -> All Categories = //a[@class = 'user-name_link dropdown-toggle'][*[contains(text(),'All Categories')]]
+Сategories  -> Youtube =  //a[contains(text(), 'YouTube')]
+Department -> New Department = //*[@id='new-department']
+Tickets -> title's = //*[@class="ticket_title"]//*
+Tickets -> assignee's = //*[@class="ticket_assignee"]//tr
+Tickets -> category = //td[@width='130px']//span[not(contains(text(), 'Test'))]
+Tickets -> managers = //span[contains(text(), 'Managers')]
+Tickets -> done = //span[contains(text(), 'DONE')]
+Tickets -> table = //table[@class='ticket-table-ex ticket-table table table-striped table-responsive']
+Company -> new company =  //button[@id='new-company']
+burger menu -> //div[@class='navbar-minimize']
+//span[@aria-hidden='true']
+
+Login page -> login = //*[@id="username"]
+Login page -> password = //*[@id="password"]
+Login page -> signInButton= //*[@id="login-signin"]
+
+Dashboard -> tableRows -> //*[@id="collapse7"]/div/table/tbody/tr
+Dashboard ->done deadline -> //*[@id="dashboard-done"]
+
+
+
+

@@ -1,0 +1,92 @@
+Select all Full name from the table on Managers page where Department = "Комната добра":
+SELECT manager.first_name, manager.last_name
+FROM manager
+JOIN department
+ON manager.department_id = department.id
+WHERE department.name = 'Комната добра';
+
+
+Select the Full name from the table on Managers page where phone is not empty and email contains @gmail.com: 
+SELECT first_name, last_name
+FROM manager
+WHERE phone IS NOT NULL AND email LIKE '%@gmail.com%';
+
+
+Select the ID from the table on dashboard page Done Deadline tab where Created from 19.04.2018 to 03.05.2018 and Category = "Финансы":
+SELECT ticket.id
+FROM ticket
+JOIN category
+ON ticket.category_id = category.id
+WHERE creation_timestamp BETWEEN '2018-04-19' AND '2018-05-03'
+AND category.name = 'Финансы';
+
+
+Select the Title from table on dashboard page Done Deadline tab where Priority=P4 and Assigned = "Татьяна Алимова":
+SELECT title
+FROM ticket
+JOIN manager
+ON ticket.assignee_id = manager.id
+WHERE priority = 'P4'
+AND manager.first_name || ' ' || manager.last_name = 'Татьяна Алимова';
+
+
+Search the Title on the departments page where Email is not empty:
+SELECT name
+FROM department
+WHERE name LIKE '%website%'
+AND email IS NOT NULL;
+
+
+Search by criteria First Name and Last Name on the managers page:
+SELECT *
+FROM manager
+WHERE first_name = 'Сергей'
+AND last_name = 'Немчинский';
+
+
+Search by criteria Department name on the managers page:
+SELECT login, first_name, last_name
+FROM manager
+JOIN department
+ON manager.department_id = department.id
+WHERE department.name LIKE '%Новий%';
+
+
+--------------------------------------------------------------------------------
+
+1. Select random Full name from the table on managers page and select/check information about the manager on  Manager Tab details and Tickets Tab
+
+SELECT first_name, last_name, d.name, m.phone, m.skype, m.email, m.login, m.is_admin, m.creation_timestamp, m.update_timestamp
+FROM manager AS m
+JOIN ticket ON m.id = ticket.assignee_id
+JOIN department AS d
+ON d.id = m.department_id
+ORDER BY RANDOM()
+LIMIT 1;
+
+
+2.  Select random Title department from the table on Departments page and select/check information about department on Department details Tab
+
+SELECT d.name, d.phone, d.skype, d.email, d.website, d.country, d.city, d.street,
+d.building, d.room_number, CONCAT(m.first_name, ' ', m.last_name) AS managers, d.creation_timestamp, d.update_timestamp
+FROM department as d
+JOIN manager AS m
+ON m.department_id = d.id
+ORDER BY RANDOM()
+LIMIT 1;
+
+3. Select random category from the table on Categories page and select/check information about tickets on categories -> Tickets Tab 
+
+SELECT t.id, t.title, company.name AS company, CONCAT(d.name, ' ', m.first_name, ' ', m.last_name) AS assignee,
+stage_aud.name AS stage, category.name AS category
+FROM category
+JOIN ticket AS t ON category.id = t.category_id
+JOIN company ON t.id = company.id
+JOIN manager AS m ON t.assignee_id = m.id
+JOIN department AS d ON d.id = m.department_id
+JOIN stage_aud ON t.stage_id = stage_aud.id
+ORDER BY RANDOM ()
+LIMIT 1;
+
+
+
